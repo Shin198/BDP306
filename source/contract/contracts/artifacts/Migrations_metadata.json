@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.4.17+commit.bdeb9e52"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "last_completed_migration",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "completed",
+						"type": "uint256"
+					}
+				],
+				"name": "setCompleted",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Migrations.sol": "Migrations"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Migrations.sol": {
+			"keccak256": "0x178447ca79cf9a84c36c043c49a48ac4be32031439bd10424d5f4692d509b37f",
+			"urls": [
+				"bzzr://5efecf1e0d4908bf3daad9117d8d3d664c07764d095a48797d5ec56907a51514"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,177 @@
+{
+	"compiler": {
+		"version": "0.4.17+commit.bdeb9e52"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_srcToken",
+						"type": "address"
+					},
+					{
+						"name": "_destToken",
+						"type": "address"
+					},
+					{
+						"name": "_srcAmmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getExchangeRate",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "DEFAULT_ADDRESS",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_reserve",
+						"type": "address"
+					},
+					{
+						"name": "_token",
+						"type": "address"
+					},
+					{
+						"name": "_isAdd",
+						"type": "bool"
+					}
+				],
+				"name": "addReserve",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ETH_ADDRESS",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_srcToken",
+						"type": "address"
+					},
+					{
+						"name": "_destToken",
+						"type": "address"
+					},
+					{
+						"name": "_srcAmmount",
+						"type": "uint256"
+					}
+				],
+				"name": "exchangeToken",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Exchange.sol": "Exchange"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Exchange.sol": {
+			"keccak256": "0xb13c21f61e904d6377f15594d9a4f7f898e7ed0b95d9d4dcef2b28b30f7e8f62",
+			"urls": [
+				"bzzr://5f9fe391b554cae6f45d1b49e98368000c891b8c14bf38780f5a836b0bf02874"
+			]
+		},
+		"contracts/Reserve.sol": {
+			"keccak256": "0xf8185c41bd34cd49d79be37865583a9eda806337efaf985366ce345fe1a287aa",
+			"urls": [
+				"bzzr://2a869707864c5cbc7b04341922d0c55fd770dc97edbdc0980501229f8a8142c9"
+			]
+		},
+		"contracts/TestToken.sol": {
+			"keccak256": "0xe38e4217b732cebfe0ae1145ad48e4107b73663f2b09f59a765e1a8b90cfc7db",
+			"urls": [
+				"bzzr://58918cb90e4765452f68582a1cde1af2e09e8b5bee333b5de22a83fc9c20acdb"
+			]
+		}
+	},
+	"version": 1
+}

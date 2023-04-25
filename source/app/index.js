@@ -66,28 +66,27 @@ $(function () {
       let token0Balance = await networkService.getTokenBalances(
         EnvConfig.TOKENS[0].address
       );
-      $("#balance__tka").html("token a : " + token0Balance);
+      $("#balance__tka").html("Token a : " + token0Balance / 1e18);
     } catch (err) {
-      $("#balance__tka").html("token a : " + 0);
-      console.error(err);
+      $("#balance__tka").html("Token a : " + 0);
     }
     networkService
       .getTokenBalances(EnvConfig.TOKENS[1].address)
       .then((result) => {
-        const balance = result;
-        $("#balance__tkb").html("token b : " + balance);
+        const balance = result / 1e18;
+        $("#balance__tkb").html("Token b : " + balance);
       })
       .catch((error) => {
-        $("#balance__tkb").html("token b : " + 0);
+        $("#balance__tkb").html("Token b : " + 0);
       });
     networkService
       .getTokenBalances(EnvConfig.TOKENS[2].address)
       .then((result) => {
         const balance = result / 1e18;
-        $("#balance__eth").html("tomo : " + balance);
+        $("#balance__eth").html("Ether : " + balance);
       })
       .catch((error) => {
-        $("#balance__eth").html("tomo : " + 0);
+        $("#balance__eth").html("Ether : " + 0);
       });
   }
 
@@ -113,9 +112,7 @@ $(function () {
         desttoken.address,
         defaultSrcAmount
       );
-      console.log(rate)
       rate /= 1e18;
-      console.log(rate)
 
       $("#exchange-rate").html(rate);
       exChangeRate = rate;
@@ -215,14 +212,14 @@ $(function () {
       let approveRes = await networkService.approval(srcToken.address, value);
 
       if (approveRes.status) {
-        swal("Transact successed!", {
+        swal("Transaction successed!", {
           icon: "success",
           timer: 3000,
         });
         initBalances();
         return;
       }
-      swal("Transact failed!", {
+      swal("Transaction failed!", {
         icon: "error",
         timer: 3000,
       });
@@ -253,7 +250,6 @@ $(function () {
       // const destTokenSym = $('#"selected-dest-symbol').text();
       const value = $("#swap-source-amount").val();
       $(".input-placeholder").html(exChangeRate * value);
-      console.log(value, exChangeRate);
     }
   });
 
@@ -298,7 +294,6 @@ $(function () {
   $("#swap-button").on("click", function () {
     // const modalid = $(this).data('modal-id');
     // $(`#${modalid}`).addClass('modal--active');
-
     const srcTokenSym = $("#selected-src-symbol").text();
     const destTokenSym = $("#selected-dest-symbol").text();
     const value = $("#swap-source-amount").val();
@@ -315,6 +310,7 @@ $(function () {
     const srcToken = findTokenBySymbol(srcTokenSym);
     const destToken = findTokenBySymbol(destTokenSym);
     //do transaction
+
     networkService
       .getTokenBalances(srcToken.address)
       .then((res) => {
@@ -433,13 +429,13 @@ $(function () {
                         .then((res) => {
                           //success
                           if (res.status) {
-                            swal("Transact successed!", {
+                            swal("Transaction successed!", {
                               icon: "success",
                               timer: 3000,
                             });
                           } else {
                             //failed
-                            swal("Transact failed!", {
+                            swal("Transaction failed!", {
                               icon: "error",
                               timer: 3000,
                             });

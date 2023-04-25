@@ -1,0 +1,222 @@
+{
+	"compiler": {
+		"version": "0.4.17+commit.bdeb9e52"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "token",
+						"type": "address"
+					},
+					{
+						"name": "amount",
+						"type": "uint256"
+					},
+					{
+						"name": "destAddress",
+						"type": "address"
+					}
+				],
+				"name": "withdrawFunds",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "sellRate",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_isBuy",
+						"type": "bool"
+					},
+					{
+						"name": "_srcAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "getExchangeRate",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "supportToken",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_isBuy",
+						"type": "bool"
+					},
+					{
+						"name": "_srcAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "exchange",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "ETH_ADDRESS",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "funds",
+				"outputs": [
+					{
+						"name": "ethStored",
+						"type": "uint256"
+					},
+					{
+						"name": "tokenStored",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_buyRate",
+						"type": "uint256"
+					},
+					{
+						"name": "_sellRate",
+						"type": "uint256"
+					}
+				],
+				"name": "setExchangeRates",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "buyRate",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_supportToken",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Reserve.sol": "Reserve"
+		},
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Reserve.sol": {
+			"keccak256": "0xe748e450a5e54ca54439e705abdccc2dff70d80c93fbadae70af76be0874aa28",
+			"urls": [
+				"bzzr://53323ce357549264f2e5f41b7dba21235f4bb2a4fd7250efa72e1ab0b50fb4d5"
+			]
+		},
+		"contracts/TestToken.sol": {
+			"keccak256": "0xe38e4217b732cebfe0ae1145ad48e4107b73663f2b09f59a765e1a8b90cfc7db",
+			"urls": [
+				"bzzr://58918cb90e4765452f68582a1cde1af2e09e8b5bee333b5de22a83fc9c20acdb"
+			]
+		}
+	},
+	"version": 1
+}

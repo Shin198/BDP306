@@ -1,6 +1,5 @@
 const EnvConfig = {
-  //RPC_ENDPOINT: "http://localhost:8545",
-  RPC_ENDPOINT: 'https://rpc.testnet.tomochain.com',
+  RPC_ENDPOINT: "http://localhost:8545",
   TOKEN_ABI: [
     {
       constant: true,
@@ -437,7 +436,7 @@ const EnvConfig = {
       "type": "function"
     }
   ],
-  EXCHANGE_CONTRACT_ADDRESS: "0x7EbDcCBEef42D064F95c155B3C0Ac3827AC47038",
+  EXCHANGE_CONTRACT_ADDRESS: "0x1FA35Fdfb978e52A27c45E0835e5B285CccB396a",
   /* END TODO */
 
   TOKENS: [
@@ -445,24 +444,20 @@ const EnvConfig = {
     {
       name: "Token A",
       symbol: "TKA",
-      address: "0x3B6E820a4171454cee1071E74F167c0c83268b7f",
+      address: "0xf1328Ed12CEAD254435360943E4F4daB26De79Ce",
     },
     {
       name: "TokenB",
       symbol: "TKB",
-      address: "0x0A2ef3B082Fa44f0483164f8DE42AF7e4614f701",
+      address: "0xeB60C0fB3C8b01ec6219BaBB008467374D96A553",
     },
     /* END TODO */
     {
-      name: "TOMO",
-      symbol: "TOMO",
-      address: "0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE",
+      name: "Ether",
+      symbol: "ETH",
+      address: "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
     },
   ],
 };
 
 export default EnvConfig;
-
-
-// acc1 : 0x248E25777F5d69f06e74031FED0C0079378838B1
-// acc2 : 0x8DB6AbAA467d40bdf28Df12A4012FbBAA367fdf5

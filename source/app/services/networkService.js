@@ -48,7 +48,6 @@ export async function checkApprove(srcTokenAddress, spendValue) {
   let result = await tokenContract.methods
     .allowance(account, EnvConfig.EXCHANGE_CONTRACT_ADDRESS)
     .call();
-
   return result / 1e18 >= spendValue;
 }
 
@@ -62,7 +61,6 @@ export async function getExchangeRate(
   let exchangeRate = await exchangeContract.methods
     .getExchangeRate(srcTokenAddress, destTokenAddress, srcAmount)
     .call();
-
   return exchangeRate;
 }
 
@@ -98,6 +96,7 @@ export async function swapToken(srcToken, destToken, value) {
 }
 
 export async function estimateGasSwapToken(srcToken, destToken, value) {
+  console.log(srcToken, destToken, value)
   const accounts = await getWeb3Instance().eth.getAccounts();
   if (accounts == undefined || accounts == [] || accounts == null) {
     return new Error(`Can't connect to account`);
@@ -109,12 +108,11 @@ export async function estimateGasSwapToken(srcToken, destToken, value) {
   if (srcToken.address == EnvConfig.TOKENS[2].address) {
     txObj.value = String(value * 1e18);
   }
-  console.log(txObj)
   const exchangeContract = getExchangeContract();
   let res = await exchangeContract.methods
     .exchangeToken(srcToken.address, destToken.address, String(value * 1e18))
     .estimateGas(txObj);
-
+  console.log(res)
   return res;
 }
 
@@ -174,6 +172,5 @@ export async function getTokenBalances(token) {
     return await getWeb3Instance().eth.getBalance(account);
   }
   const tokenContract = getTokenContract(token);
-  console.log(token, await tokenContract.methods.balanceOf(account).call())
   return await tokenContract.methods.balanceOf(account).call();
 }
